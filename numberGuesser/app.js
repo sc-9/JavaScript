@@ -24,28 +24,27 @@ guessBtn.addEventListener('click', function() {
 
     if(isNaN(guess) || guess < min || guess > max) {
         setMessage(`Please enter a number between ${min} and ${max}`, 'red');
-    }
-
-    if(guess === winningNumber) {
+    } else {
+       if(guess === winningNumber) {
         // guessInput.disabled = true;
         // guessInput.style.borderColor = 'green';
         // setMessage(`${winningNumber} is correct, YOU WIN !!`, 'green');
 
-        gameOver(true, `${winningNumber} is correct, YOU WIN !!`);
-    } else {
-        guessLeft -= 1;
-        if(guessLeft === 0) {
-            // guessInput.disabled = true;
-            // guessInput.style.borderColor = 'red';
-            // setMessage(`GAME OVER. You Lose. The correct number was ${winningNumber}`, 'red');
-            gameOver(false, `GAME OVER. You Lose. The correct number was ${winningNumber}`);
+            gameOver(true, `${winningNumber} is correct, YOU WIN !!`);
         } else {
-            guessInput.style.borderColor = 'red';
-            guessInput.value = '';
-            setMessage(`${guess} is a WRONG GUESS :( You have ${guessLeft} guess left. Try Again..`, 'red');
+            guessLeft -= 1;
+            if(guessLeft === 0) {
+                // guessInput.disabled = true;
+                // guessInput.style.borderColor = 'red';
+                // setMessage(`GAME OVER. You Lose. The correct number was ${winningNumber}`, 'red');
+                gameOver(false, `GAME OVER. You Lose. The correct number was ${winningNumber}`);
+            } else {
+                guessInput.style.borderColor = 'red';
+                guessInput.value = '';
+                setMessage(`${guess} is a WRONG GUESS :( You have ${guessLeft} guess left. Try Again..`, 'red');
+            }
         }
     }
-
 });
 
 function getRandonNum(min, max) {
