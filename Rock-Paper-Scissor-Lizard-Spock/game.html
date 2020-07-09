@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>A Game</title>
+	<link rel="stylesheet" type="text/css" href="game.css">
+	<link href="https://fonts.googleapis.com/css?family=Dosis:400,800|Russo+One|Saira+Stencil+One&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h1>Rock &nbsp;.&nbsp; Paper &nbsp;.&nbsp; Scissor &nbsp;.&nbsp; Lizard &nbsp;.&nbsp; Spock</h1>
+		<p id="rules">
+		Scissors cuts paper, paper covers rock, rock crushes lizard, lizard poisons Spock, Spock smashes scissors, scissors decapitates lizard, lizard eats paper, paper disproves Spock, Spock vaporizes rock, and as it always has, rock crushes scissors.</p>
+
+	</header>
+
+	<div class="scoreBoard">
+		<div id="user" class="badge">player</div>
+		<span id="userScore">0</span>:<span id=compScore>0</span>
+		<div id="comp" class="badge">computer</div>
+	</div>
+	<div class="result">
+		<p></p>
+	</div>
+
+	<div id="choice">
+		<div class="move" id="rock">
+			<img src="rock1.png" alt="rock">
+		</div>
+		<div class="move" id="paper">
+			<img src="paper1.png" alt="paper">
+		</div>
+		<div class="move" id="scissor">
+			<img src="scissor1.png" alt="scissor">
+		</div>
+		<div class="move" id="lizard">
+			<img src="lizard1.png" alt="lizard">
+		</div>
+		<div class="move" id="spock">
+			<img src="spock1.png" alt="spock">
+		</div>
+	</div>
+
+	<p id="message">Make your move.</p>
+
+<script type="text/javascript" src="game.js"></script>
+</body>
+</html>
